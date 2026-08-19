@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquiries &amp; Bookings | 1947 on Vilakazi Street</title>
+<meta name="description" content="Enquire about table bookings, private functions, corporate events, or the Chef's Table experience at 1947 on Vilakazi Street.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="brand-year">1947</span> on Vilakazi Street</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="enquiry.html" aria-current="page">Enquiries</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero" style="padding:80px 24px 60px;">
+    <div class="hero-inner">
+      <p class="eyebrow">Enquiries &amp; Bookings</p>
+      <h1 style="font-size:clamp(2rem,4.5vw,3.2rem);">Let's plan your visit.</h1>
+      <p class="lede">Table reservations, private functions, corporate events, or our Chef's Table experience — tell us what you have in mind.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="grid grid-2" style="align-items:start;">
+
+        <div>
+          <div id="formSuccess">Thank you — your enquiry has been received. Our team will be in touch shortly to confirm the details.</div>
+
+          <form data-validate novalidate>
+            <div class="form-grid">
+
+              <div class="field">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <p class="field-error">Please enter your full name.</p>
+              </div>
+
+              <div class="field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <p class="field-error">Please enter a valid email address.</p>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+                <p class="field-error">Please enter your phone number.</p>
+              </div>
+
+              <div class="field">
+                <label for="enquiryType">Type of Enquiry</label>
+                <select id="enquiryType" name="enquiryType" required>
+                  <option value="">Select an option</option>
+                  <option value="table">Table Reservation</option>
+                  <option value="private">Private Function</option>
+                  <option value="corporate">Corporate Booking</option>
+                  <option value="chefstable">Chef's Table Experience</option>
+                  <option value="other">Other</option>
+                </select>
+                <p class="field-error">Please select an enquiry type.</p>
+              </div>
+
+              <div class="field">
+                <label for="guests">Number of Guests</label>
+                <input type="number" id="guests" name="guests" min="1" required>
+                <p class="field-error">Please enter the number of guests.</p>
+              </div>
+
+              <div class="field">
+                <label for="preferredDate">Preferred Date</label>
+                <input type="date" id="preferredDate" name="preferredDate" required>
+                <p class="field-error">Please choose a preferred date.</p>
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Tell us more about your booking or event..."></textarea>
+                <p class="field-error">Please add a short message.</p>
+              </div>
+
+              <div>
+                <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+                <p class="form-note">This form does not send live data — it is a front-end prototype for this project stage.</p>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+        <aside>
+          <div class="card" style="margin-bottom:20px;">
+            <h3>Private Functions</h3>
+            <p>Host birthdays, anniversaries, or intimate gatherings in our upstairs balcony space with views over Orlando.</p>
+          </div>
+          <div class="card" style="margin-bottom:20px;">
+            <h3>Corporate Bookings</h3>
+            <p>Meeting rooms and long-table setups available for corporate lunches and team functions.</p>
+          </div>
+          <div class="card">
+            <h3>Chef's Table</h3>
+            <p>A once-off four-course experience, paired with wine by our in-house sommelier, limited to 10 guests. Follow us on Instagram for upcoming dates.</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>1947 on Vilakazi Street</h4>
+        <p>7156 Vilakazi Street, Orlando West, Soweto, 1804</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="enquiry.html">Enquiries</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Tuesday – Sunday: 12:00 – 22:00<br>Monday: Closed</p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 1947 on Vilakazi Street. Student project for WEDE5020, IIE Rosebank College.</div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
