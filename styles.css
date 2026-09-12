@@ -177,7 +177,7 @@ select:focus-visible {
 /* ===== Hero ===== */
 .hero {
   background:
-    linear-gradient(160deg, rgba(27,24,21,0.88) 0%, rgba(107,22,38,0.82) 100%);
+    linear-gradient(160deg, rgba(27,24,21,0.78) 0%, rgba(107,22,38,0.7) 100%);
   color: var(--cream);
   padding: 110px 24px 90px;
   position: relative;
@@ -220,6 +220,10 @@ select:focus-visible {
 }
 
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* Smaller hero variant used on interior pages (About, Menu, Contact, Enquiries) */
+.hero--sm { padding: 80px 24px 60px; }
+.hero-title-sm { font-size: var(--step3); }
 
 /* ===== Buttons ===== */
 .btn {
@@ -480,3 +484,135 @@ textarea { resize: vertical; min-height: 130px; }
   font-weight: 700;
 }
 .skip-link:focus { left: 12px; top: 12px; }
+
+/* ============================================
+   PART 2 ADDITIONS
+   ============================================ */
+
+/* ===== Extended CSS reset ===== */
+ul, ol { list-style: none; }
+img, picture, video, iframe { max-width: 100%; display: block; }
+h1, h2, h3, h4 { font-weight: 600; line-height: 1.15; }
+button, input, select, textarea { font: inherit; color: inherit; }
+
+/* ===== Typography scale (harmonious type ramp) =====
+   Base 1rem, ratio ~1.25, fluid with clamp() so it also
+   answers the responsive/relative-units requirement. */
+:root {
+  --step-1: clamp(0.83rem, 0.8rem + 0.15vw, 0.9rem);
+  --step0:  1rem;
+  --step1:  clamp(1.2rem, 1.1rem + 0.5vw, 1.35rem);
+  --step2:  clamp(1.5rem, 1.3rem + 1vw, 1.85rem);
+  --step3:  clamp(1.9rem, 1.5rem + 2vw, 2.6rem);
+  --step4:  clamp(2.4rem, 1.8rem + 3vw, 4.2rem);
+}
+
+/* ===== Utility classes (replace repeated inline styles) ===== */
+.title-lg {
+  font-family: var(--font-display);
+  font-size: var(--step3);
+  color: var(--burgundy-dark);
+  margin: 0.75em 0 1.1em;
+}
+.on-dark .title-lg { color: var(--cream); }
+
+.title-md {
+  font-family: var(--font-display);
+  color: var(--burgundy-dark);
+  font-size: var(--step2);
+  margin-bottom: 1em;
+}
+
+.title-sm { margin: 0.6em 0 0.9em; }
+.subheading {
+  font-family: var(--font-display);
+  color: var(--burgundy-dark);
+  margin: 1.75em 0 0.75em;
+}
+.measure { max-width: 52ch; }
+.mb-sm { margin-bottom: 1em; }
+.mb-md { margin-bottom: 1.25em; }
+.mb-lg { margin-bottom: 2.2em; }
+.mt-lg { margin-top: 2.2em; }
+.wrap--narrow { max-width: 840px; }
+.center-v { align-items: center; }
+.start-v { align-items: start; }
+.text-center { text-align: center; }
+
+.btn-outline-burgundy {
+  border-color: var(--burgundy);
+  color: var(--burgundy);
+}
+.btn-outline-burgundy:hover { background: var(--burgundy); color: var(--cream); }
+
+.card--on-dark {
+  background: transparent;
+  border-color: rgba(243, 236, 221, 0.15);
+}
+.card--on-dark h3 { color: var(--gold); }
+
+/* ===== Interactive states ===== */
+.btn:active { transform: translateY(1px) scale(0.98); }
+.btn-primary:active { background: var(--gold); }
+.nav-links a:active { color: var(--gold-soft); }
+.card:hover { box-shadow: 0 10px 28px rgba(27, 24, 21, 0.1); transform: translateY(-2px); }
+.card { transition: transform 0.18s ease, box-shadow 0.18s ease; box-shadow: 0 1px 3px rgba(27,24,21,0.06); }
+
+/* ===== Sticky header shadow ===== */
+.site-header { box-shadow: 0 2px 10px rgba(0,0,0,0.25); }
+
+/* ===== Responsive photography ===== */
+.photo-frame {
+  overflow: hidden;
+  border: 1px solid rgba(27, 24, 21, 0.1);
+  box-shadow: 0 14px 34px rgba(27, 24, 21, 0.18);
+}
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photo-4-3 { aspect-ratio: 4 / 3; }
+.photo-3-4 { aspect-ratio: 3 / 4; }
+
+.photo-frame--hero {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.photo-frame--hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+.hero { isolation: isolate; }
+.hero-inner { z-index: 1; }
+
+/* ===== Team avatar placeholders (no photography available) ===== */
+.avatar {
+  min-height: 160px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(150deg, var(--burgundy) 0%, var(--burgundy-dark) 100%);
+  color: var(--gold-soft);
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  box-shadow: inset 0 0 0 3px rgba(201,162,74,0.35);
+}
+
+/* ===== Breakpoints =====
+   Desktop: default (>820px)
+   Tablet:  ≤820px  (see .grid-3/.grid-2 stacking above)
+   Mobile:  ≤480px  (fine-tuning below) */
+@media (max-width: 480px) {
+  .hero { padding: 70px 18px 50px; }
+  .wrap { padding: 0 18px; }
+  section { padding: 56px 0; }
+  .btn { width: 100%; text-align: center; }
+  .hero-actions { flex-direction: column; }
+}
