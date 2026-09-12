@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>1947 on Vilakazi Street | Fine Dining, Orlando West, Soweto</title>
 <meta name="description" content="1947 on Vilakazi Street is a fine-dining restaurant on Soweto's historic Vilakazi Street, offering elevated South African cuisine, wine, and heritage.">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -28,6 +28,13 @@
 <main id="main">
 
   <section class="hero">
+    <div class="photo-frame--hero" aria-hidden="true">
+      <picture>
+        <source srcset="images/home-hero-800.jpg 800w, images/home-hero-1400.jpg 1400w, images/home-hero-2000.jpg 2000w"
+                sizes="100vw">
+        <img src="images/home-hero-1400.jpg" alt="" loading="eager">
+      </picture>
+    </div>
     <div class="hero-inner">
       <p class="eyebrow">Orlando West · Soweto</p>
       <h1>Fine dining on the world's only Nobel Peace Prize street.</h1>
@@ -60,14 +67,20 @@
 
   <section>
     <div class="wrap">
-      <div class="grid grid-2" style="align-items:center;">
+      <div class="grid grid-2 center-v">
         <div>
           <p class="eyebrow">Our Story</p>
-          <h2 style="font-family:var(--font-display); font-size:clamp(1.8rem,3.4vw,2.4rem); color:var(--burgundy-dark); margin:12px 0 18px;">Soweto's heritage, elevated.</h2>
-          <p style="max-width:52ch; margin-bottom:18px;">Nestled along the most storied street in South Africa, 1947 on Vilakazi Street blends township warmth with refined hospitality — proof that fine dining and community spirit belong at the same table.</p>
-          <a href="about.html" class="btn btn-outline" style="border-color:var(--burgundy); color:var(--burgundy);">Read Our Story</a>
+          <h2 class="title-md">Soweto's heritage, elevated.</h2>
+          <p class="measure mb-sm">Nestled along the most storied street in South Africa, 1947 on Vilakazi Street blends township warmth with refined hospitality — proof that fine dining and community spirit belong at the same table.</p>
+          <a href="about.html" class="btn btn-outline btn-outline-burgundy">Read Our Story</a>
         </div>
-        <img src="interior-seating-1.jpeg" alt="Interior seating area at 1947 on Vilakazi Street" style="aspect-ratio:4/3; object-fit:cover; width:100%;">
+        <div class="photo-frame photo-4-3">
+          <picture>
+            <source srcset="images/home-interior-400.jpg 400w, images/home-interior-800.jpg 800w, images/home-interior-1200.jpg 1200w"
+                    sizes="(max-width: 820px) 100vw, 50vw">
+            <img src="images/home-interior-800.jpg" alt="The lounge and dining area at 1947 on Vilakazi Street, with a velvet blue banquette and wine glasses set on a wooden table." loading="lazy" width="1200" height="900">
+          </picture>
+        </div>
       </div>
     </div>
   </section>
@@ -79,29 +92,29 @@
         <h2>A taste of the menu.</h2>
       </div>
       <div class="grid grid-3">
-        <div class="card" style="background:transparent; border-color:rgba(243,236,221,0.15);">
-          <h3 style="color:var(--gold);">Buttermilk Chicken Thighs</h3>
+        <div class="card card--on-dark">
+          <h3>Buttermilk Chicken Thighs</h3>
           <p>Buttermilk-marinated, finished with a chilli-lime yoghurt dip.</p>
         </div>
-        <div class="card" style="background:transparent; border-color:rgba(243,236,221,0.15);">
-          <h3 style="color:var(--gold);">Lamb Rump</h3>
+        <div class="card card--on-dark">
+          <h3>Lamb Rump</h3>
           <p>Tzatziki, olive and feta ratatouille, baby potatoes.</p>
         </div>
-        <div class="card" style="background:transparent; border-color:rgba(243,236,221,0.15);">
-          <h3 style="color:var(--gold);">Surf and Turf</h3>
+        <div class="card card--on-dark">
+          <h3>Surf and Turf</h3>
           <p>Beef fillet, Argentine prawns, pommes purée, creamy garlic sauce.</p>
         </div>
       </div>
-      <div style="margin-top:36px;">
+      <div class="mt-lg">
         <a href="menu.html" class="btn btn-primary">See Full Menu</a>
       </div>
     </div>
   </section>
 
   <section class="tight">
-    <div class="wrap" style="text-align:center;">
+    <div class="wrap text-center">
       <p class="eyebrow">Plan Your Visit</p>
-      <h2 style="font-family:var(--font-display); font-size:clamp(1.8rem,3.4vw,2.4rem); color:var(--burgundy-dark); margin:12px 0 22px;">Reserve your table on Vilakazi Street.</h2>
+      <h2 class="title-md">Reserve your table on Vilakazi Street.</h2>
       <a href="enquiry.html" class="btn btn-primary">Make an Enquiry</a>
     </div>
   </section>

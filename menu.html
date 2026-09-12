@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Menu | 1947 on Vilakazi Street</title>
 <meta name="description" content="Explore the food menu at 1947 on Vilakazi Street — starters, mains, and desserts inspired by South African flavours.">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -27,22 +27,16 @@
 
 <main id="main">
 
-  <section class="hero" style="padding:80px 24px 60px;">
+  <section class="hero hero--sm">
     <div class="hero-inner">
       <p class="eyebrow">Our Menu</p>
-      <h1 style="font-size:clamp(2rem,4.5vw,3.2rem);">Familiar flavours, elevated.</h1>
+      <h1 class="hero-title-sm">Familiar flavours, elevated.</h1>
       <p class="lede">Prices are indicative and may change seasonally. Please ask your host about allergens.</p>
     </div>
   </section>
 
-  <section class="tight">
-    <div class="wrap" style="max-width:840px;">
-      <img src="menu-pasta.jpeg" alt="Seafood linguine with mussels and prawns at 1947 on Vilakazi Street" style="width:100%; border:1px solid rgba(27,24,21,0.15);">
-    </div>
-  </section>
-
   <section>
-    <div class="wrap" style="max-width:840px;">
+    <div class="wrap wrap--narrow">
 
       <div class="menu-category">
         <h3>Starters</h3>
@@ -131,21 +125,28 @@
 
       <div class="menu-category">
         <h3>From the Cellar</h3>
-        <p style="margin-bottom:18px;">A curated selection of South African wines, whiskies, cognacs, gins, and cocktails, from R60. Ask your host or sommelier for our current tasting list.</p>
-        <div class="grid grid-2" style="margin-bottom:22px;">
-          <img src="images/wine-cellar-1.jpeg" alt="Wine cellar at 1947 on Vilakazi Street" style="aspect-ratio:4/3; object-fit:cover; width:100%;">
-          <img src="images/cocktails-table.jpeg" alt="Signature cocktails at 1947 on Vilakazi Street" style="aspect-ratio:1/1; object-fit:cover; width:100%;">
+        <div class="grid grid-2 center-v">
+          <div>
+            <p class="mb-md">A curated selection of South African wines, whiskies, cognacs, gins, and cocktails, from R60. Ask your host or sommelier for our current tasting list.</p>
+            <a href="contact.html" class="btn btn-outline btn-outline-burgundy">Enquire About Wine Tastings</a>
+          </div>
+          <div class="photo-frame photo-3-4">
+            <picture>
+              <source srcset="images/menu-cellar-400.jpg 400w, images/menu-cellar-800.jpg 800w"
+                      sizes="(max-width: 820px) 100vw, 50vw">
+              <img src="images/menu-cellar-800.jpg" alt="A glass of rosé wine on a table in the lounge at 1947 on Vilakazi Street." loading="lazy" width="800" height="1067">
+            </picture>
+          </div>
         </div>
-        <a href="contact.html" class="btn btn-outline" style="border-color:var(--burgundy); color:var(--burgundy);">Enquire About Wine Tastings</a>
       </div>
 
     </div>
   </section>
 
   <section class="on-dark tight">
-    <div class="wrap" style="text-align:center;">
+    <div class="wrap text-center">
       <p class="eyebrow">Ready to Dine?</p>
-      <h2 style="margin:10px 0 22px;">Reserve your table today.</h2>
+      <h2 class="title-sm">Reserve your table today.</h2>
       <a href="enquiry.html" class="btn btn-primary">Book Now</a>
     </div>
   </section>

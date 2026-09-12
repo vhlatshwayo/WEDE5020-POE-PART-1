@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us | 1947 on Vilakazi Street</title>
 <meta name="description" content="The story behind 1947 on Vilakazi Street — founded in 2021 on Soweto's historic Vilakazi Street.">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -27,23 +27,29 @@
 
 <main id="main">
 
-  <section class="hero" style="padding:80px 24px 60px;">
+  <section class="hero hero--sm">
     <div class="hero-inner">
       <p class="eyebrow">About Us</p>
-      <h1 style="font-size:clamp(2rem,4.5vw,3.2rem);">A name that carries a family's story.</h1>
+      <h1 class="hero-title-sm">A name that carries a family's story.</h1>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <div class="grid grid-2" style="align-items:start;">
+      <div class="grid grid-2 start-v">
         <div>
-          <h2 style="font-family:var(--font-display); color:var(--burgundy-dark); font-size:1.7rem; margin-bottom:16px;">Our History</h2>
-          <p style="margin-bottom:16px;">1947 on Vilakazi Street was founded in 2021 by Naomi Lele Ratsheko. The name honours 1947 — the birth year of both her parents — carrying their memory into every part of the restaurant, from the menu to the wine list.</p>
-          <p style="margin-bottom:16px;">We sit at 7156 Vilakazi Street in Orlando West, Soweto: the only street in the world that has been home to two Nobel Peace Prize laureates, Nelson Mandela and Archbishop Desmond Tutu. Every day, our doors open onto a street that carries some of South Africa's most important history.</p>
+          <h2 class="title-md">Our History</h2>
+          <p class="mb-sm">1947 on Vilakazi Street was founded in 2021 by Naomi Lele Ratsheko. The name honours 1947 — the birth year of both her parents — carrying their memory into every part of the restaurant, from the menu to the wine list.</p>
+          <p class="mb-sm">We sit at 7156 Vilakazi Street in Orlando West, Soweto: the only street in the world that has been home to two Nobel Peace Prize laureates, Nelson Mandela and Archbishop Desmond Tutu. Every day, our doors open onto a street that carries some of South Africa's most important history.</p>
           <p>What started as a vision to bring refined dining to Vilakazi Street has grown into a destination for locals celebrating milestones and travellers discovering Soweto for the first time.</p>
         </div>
-        <img src="interior-lounge.jpeg" alt="Lounge seating area at 1947 on Vilakazi Street" style="aspect-ratio:3/4; object-fit:cover; width:100%;">
+        <div class="photo-frame photo-3-4">
+          <picture>
+            <source srcset="images/about-history-400.jpg 400w, images/about-history-800.jpg 800w, images/about-history-1200.jpg 1200w"
+                    sizes="(max-width: 820px) 100vw, 50vw">
+            <img src="images/about-history-800.jpg" alt="A quiet corner inside 1947 on Vilakazi Street, showing the restaurant's warm, plant-filled interior." loading="lazy" width="1121" height="1495">
+          </picture>
+        </div>
       </div>
     </div>
   </section>
@@ -53,12 +59,12 @@
       <div class="grid grid-2">
         <div>
           <p class="eyebrow">Mission</p>
-          <h2 style="margin:10px 0 14px;">Why we do this.</h2>
+          <h2 class="title-sm">Why we do this.</h2>
           <p>To offer an elevated South African dining experience rooted in Soweto's heritage, hospitality, and sense of community — serving locals and heritage tourists alike with the same warmth.</p>
         </div>
         <div>
           <p class="eyebrow">Vision</p>
-          <h2 style="margin:10px 0 14px;">Where we're headed.</h2>
+          <h2 class="title-sm">Where we're headed.</h2>
           <p>To be recognised as a leading dining and heritage-tourism destination on Vilakazi Street — pairing authentic South African flavours with a refined, memorable experience for every guest.</p>
         </div>
       </div>
@@ -73,17 +79,17 @@
       </div>
       <div class="grid grid-3">
         <div class="card">
-          <div class="img-placeholder" style="min-height:160px; margin-bottom:16px;">Team photo</div>
+          <div class="avatar" aria-hidden="true">NR</div>
           <h3>Naomi Lele Ratsheko</h3>
           <p>Founder &amp; Owner</p>
         </div>
         <div class="card">
-          <div class="img-placeholder" style="min-height:160px; margin-bottom:16px;">Team photo</div>
+          <div class="avatar" aria-hidden="true">JW</div>
           <h3>Jan Winsent</h3>
           <p>Head Chef — seasonal, sustainable, distinctly South African menus.</p>
         </div>
         <div class="card">
-          <div class="img-placeholder" style="min-height:160px; margin-bottom:16px;">Team photo</div>
+          <div class="avatar" aria-hidden="true">L</div>
           <h3>Lerato</h3>
           <p>Sommelier &amp; Front of House — guides our wine tastings and cellar experiences.</p>
         </div>
