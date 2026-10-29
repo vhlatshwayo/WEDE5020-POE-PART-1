@@ -5,7 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>1947 on Vilakazi Street | Fine Dining, Orlando West, Soweto</title>
 <meta name="description" content="1947 on Vilakazi Street is a fine-dining restaurant on Soweto's historic Vilakazi Street, offering elevated South African cuisine, wine, and heritage.">
+<meta name="author" content="Vuyokazi Hlatshwayo">
+<meta name="theme-color" content="#1B1815">
+<link rel="canonical" href="https://YOUR-SITE.netlify.app/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="1947 on Vilakazi Street | Fine Dining, Orlando West, Soweto">
+<meta property="og:description" content="1947 on Vilakazi Street is a fine-dining restaurant on Soweto's historic Vilakazi Street, offering elevated South African cuisine, wine, and heritage.">
+<meta property="og:image" content="https://YOUR-SITE.netlify.app/images/home-hero-1400.jpg">
+<meta property="og:url" content="https://YOUR-SITE.netlify.app/index.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "1947 on Vilakazi Street",
+  "servesCuisine": "South African",
+  "address": { "@type": "PostalAddress", "streetAddress": "7156 Vilakazi Street", "addressLocality": "Orlando West, Soweto", "postalCode": "1804", "addressCountry": "ZA" },
+  "openingHours": "Tu-Su 12:00-22:00"
+}
+</script>
 </head>
 <body>
 
@@ -85,6 +106,17 @@
     </div>
   </section>
 
+  <section class="tight">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">What's On</p>
+        <h2>Upcoming at 1947.</h2>
+      </div>
+      <p id="eventsStatus" class="mb-md">Loading events...</p>
+      <div id="eventsList" class="grid grid-3"></div>
+    </div>
+  </section>
+
   <section class="on-dark">
     <div class="wrap">
       <div class="section-head">
@@ -147,6 +179,6 @@
   </div>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.js" defer></script>
 </body>
 </html>

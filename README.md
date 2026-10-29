@@ -1,7 +1,7 @@
 # 1947 on Vilakazi Street — Website Project
 
 ## Project Title
-1947 on Vilakazi Street — Website Redesign (WEDE5020 POE, Part 2)
+1947 on Vilakazi Street — Website Redesign (WEDE5020 POE, Part 3)
 
 ## Student Information
 - **Name:** Vuyokazi Hlatshwayo
@@ -21,8 +21,11 @@ This project proposes and builds a redesigned website for 1947 on Vilakazi Stree
 ## Key Features and Functionality
 - 5 pages: Home, About Us, Menu, Enquiries, Contact
 - Responsive navigation with mobile toggle menu
-- Enquiry and Contact forms with client-side JavaScript validation
-- Dual embedded maps (restaurant location + visitor parking point)
+- Enquiry and Contact forms with HTML5 and JavaScript validation, inline error messages, and AJAX submission
+- Menu search, category filter and price/name sorting
+- Gallery with lightbox, FAQ accordion, scroll animations
+- Upcoming events loaded dynamically from a JSON file
+- Interactive Leaflet map showing the restaurant and visitor parking
 - Semantic HTML5 structure (header, nav, main, footer)
 
 ## Timeline and Milestones
@@ -38,6 +41,32 @@ Part 1 covered the website proposal, content research, sitemap, initial HTML str
 
 ## Part 2 Details
 Part 2 covers CSS styling and responsive design for the desktop solution: an external stylesheet, base styles and a CSS reset, a fluid typography scale, CSS Grid/Flexbox layout, visual styling (colour, background, border, box-shadow), interactive pseudo-classes (`:hover`, `:focus`, `:active`), and responsive design using breakpoints, relative units, and responsive images (`srcset`/`picture`). All feedback from Part 1 was actioned first (see Changelog).
+
+## Part 3 Details
+Part 3 adds JavaScript functionality, search engine optimisation (SEO), form validation and deployment.
+
+**JavaScript enhancements**
+- Interactive elements: an accordion (FAQ on the Enquiries page) and a gallery lightbox (About page) with keyboard support (Esc and arrow keys).
+- Interactive map: Leaflet with OpenStreetMap tiles on the Contact page, with markers for the restaurant and visitor parking.
+- Animations and transitions: elements fade up as they scroll into view (CSS transitions triggered by an `IntersectionObserver`), plus hover and open/close animations. All motion is switched off for visitors who prefer reduced motion.
+- Advanced DOM manipulation: the lightbox and event cards are created with `createElement`, and the menu is re-ordered and filtered live in the page.
+- Dynamic content: upcoming events are loaded with `fetch()` from `data/events.json` and built into cards.
+- Search, filter and sort: the Menu page can be searched by dish or ingredient, filtered by category and sorted by price or name.
+
+**SEO**
+- On-page: a unique title and meta description per page, one `h1` per page with a logical `h2`/`h3` order, descriptive alt text, descriptive image file names, internal links in the navigation and footer, and a mobile friendly viewport. Target keywords: fine dining Soweto, Vilakazi Street restaurant, Orlando West restaurant, South African cuisine.
+- Social and structured data: Open Graph tags on every page and `Restaurant` JSON-LD on the home page.
+- Off-page plan: build backlinks through Soweto tourism listings and local food blogs, share the site on the restaurant's social media, and keep the Google Business Profile for local search up to date.
+- Technical: `robots.txt`, `sitemap.xml`, canonical links, scripts loaded with `defer`, fonts loaded with `preconnect` instead of a blocking CSS `@import`, lazy loaded images and responsive `srcset` images.
+- Security: the site is served over HTTPS by the host, user text is only ever written with `textContent` (never `innerHTML`), and no passwords or personal data are stored.
+
+**Forms**
+- `enquiry.html` validates name, email, South African phone number, number of guests (1 to 60), a date that is not in the past, and a message of at least 10 characters. After validation it sends the data with AJAX (`fetch`) and shows a response about cost and availability (deposit, Chef's Table price, or closed on Mondays).
+- `contact.html` uses the same validation, then compiles the details into an email to the restaurant using a `mailto:` link.
+- Errors show next to each field, appear when the user leaves a field, and focus moves to the first problem on submit.
+
+**Deployment**
+- Hosted on a free platform (add your live link here): https://YOUR-SITE.netlify.app/
 
 ## Sitemap
 ```
@@ -61,6 +90,10 @@ All pages share a common header/navigation and footer, and link to each other di
 │   └── styles.css
 ├── js/
 │   └── script.js
+├── data/
+│   └── events.json
+├── robots.txt
+├── sitemap.xml
 └── images/
     ├── home-hero-800.jpg / -1400.jpg / -2000.jpg       (homepage hero background)
     ├── home-interior-400.jpg / -800.jpg / -1200.jpg    (homepage "Our Story" photo)
@@ -92,7 +125,30 @@ Each photo is provided at multiple widths and served with `<picture>`/`srcset` s
 - **v0.14** — Confirmed relative units are used throughout for responsiveness: `rem`/`em` for type and spacing, `%`/`ch` for content widths (`.measure`, form inputs at `width:100%`), and `clamp()` for fluid values.
 - **v0.15** — Verified layout in browser dev tools across desktop, tablet, and mobile widths (see screenshot evidence, if included per lecturer instructions).
 
+### Part 3 — Feedback edits from Part 2
+- **v0.16** — Reviewed the Part 2 feedback. All criteria were marked as greatly exceeding the standard (100/100), so no corrections were needed.
+
+### Part 3 — JavaScript, SEO and forms
+- **v0.17** — Split `script.js` into small named functions (navigation, menu tools, accordion, lightbox, events, map, forms) so each feature is easy to find and test.
+- **v0.18** — Added search, category filter and sort controls to `menu.html`. Changed the menu category headings from `h3` to `h2` so the heading order is correct, and updated the matching CSS selector.
+- **v0.19** — Added the FAQ accordion to `enquiry.html` using buttons with `aria-expanded`, and fixed a duplicate `class` attribute on the sidebar cards.
+- **v0.20** — Added a gallery to `about.html` with a lightbox built in JavaScript (open, close, next, previous, Esc and arrow keys, focus returned on close).
+- **v0.21** — Added `data/events.json` and an "Upcoming at 1947" section on `index.html` that loads the events with `fetch()` and builds the cards with the DOM.
+- **v0.22** — Replaced the two Google Maps iframes on `contact.html` with one Leaflet map with two markers (restaurant and parking).
+- **v0.23** — Added scroll fade-in animations, accordion and lightbox transitions in `styles.css`, respecting `prefers-reduced-motion`.
+- **v0.24** — Rebuilt form validation: phone, guests, date and message length rules, specific error messages, validation on blur, and focus on the first error. Added a Message Type field to the contact form and `id` attributes to both forms.
+- **v0.25** — Enquiry form now submits with `fetch()` and shows a cost and availability response. Contact form compiles the message into a `mailto:` email.
+- **v0.26** — SEO: added Open Graph tags, canonical links, author and theme colour meta tags, `Restaurant` JSON-LD on the home page, `robots.txt` and `sitemap.xml`.
+- **v0.27** — Performance: removed the CSS `@import` for Google Fonts and replaced it with `preconnect` and `<link>` tags in each page, and added `defer` to all scripts.
+- **v0.28** — Deployed to a free host and tested every page on desktop and mobile widths.
+
 ## References
 - 1947 on Vilakazi Street. (2026) *1947 on Vilakazi Street*. Available at: https://1947onvilakazi.co.za (Accessed: 11 August 2026).
 - Mail & Guardian. (2022) *Soweto's 1947 on Vilakazi Street is a township portrait*. Available at: https://mg.co.za/friday/2022-10-07-soweto-s-1947-on-vilakazi-street-is-a-township-portrait/ (Accessed: 11 August 2026).
 - Mbanje, S. and Lunga, C. (2022) *Business Management for Southern African Students*. Cape Town: Juta.
+- Agafonkin, V. (2023) *Leaflet: an open-source JavaScript library for interactive maps* (version 1.9.4). Available at: https://leafletjs.com (Accessed: 19 October 2026).
+- OpenStreetMap contributors. (2026) *OpenStreetMap*. Available at: https://www.openstreetmap.org (Accessed: 19 October 2026).
+- Mozilla. (2026) *MDN Web Docs: Intersection Observer API*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API (Accessed: 19 October 2026).
+- Mozilla. (2026) *MDN Web Docs: Using the Fetch API*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (Accessed: 19 October 2026).
+- Google. (2026) *SEO Starter Guide*. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 19 October 2026).
+- JSONPlaceholder. (2026) *Free fake API for testing and prototyping*. Available at: https://jsonplaceholder.typicode.com (Accessed: 19 October 2026).

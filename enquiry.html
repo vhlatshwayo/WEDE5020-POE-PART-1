@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Enquiries &amp; Bookings | 1947 on Vilakazi Street</title>
 <meta name="description" content="Enquire about table bookings, private functions, corporate events, or the Chef's Table experience at 1947 on Vilakazi Street.">
+<meta name="author" content="Vuyokazi Hlatshwayo">
+<meta name="theme-color" content="#1B1815">
+<link rel="canonical" href="https://YOUR-SITE.netlify.app/enquiry.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Enquiries &amp; Bookings | 1947 on Vilakazi Street">
+<meta property="og:description" content="Enquire about table bookings, private functions, corporate events, or the Chef's Table experience at 1947 on Vilakazi Street.">
+<meta property="og:image" content="https://YOUR-SITE.netlify.app/images/home-hero-1400.jpg">
+<meta property="og:url" content="https://YOUR-SITE.netlify.app/enquiry.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -42,7 +53,7 @@
         <div>
           <div id="formSuccess">Thank you — your enquiry has been received. Our team will be in touch shortly to confirm the details.</div>
 
-          <form data-validate novalidate>
+          <form id="enquiryForm" data-validate novalidate>
             <div class="form-grid">
 
               <div class="field">
@@ -59,7 +70,7 @@
 
               <div class="field">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="011 123 4567" required>
                 <p class="field-error">Please enter your phone number.</p>
               </div>
 
@@ -78,7 +89,7 @@
 
               <div class="field">
                 <label for="guests">Number of Guests</label>
-                <input type="number" id="guests" name="guests" min="1" required>
+                <input type="number" id="guests" name="guests" min="1" max="60" required>
                 <p class="field-error">Please enter the number of guests.</p>
               </div>
 
@@ -90,13 +101,13 @@
 
               <div class="field">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" required placeholder="Tell us more about your booking or event..."></textarea>
+                <textarea id="message" name="message" minlength="10" required placeholder="Tell us more about your booking or event..."></textarea>
                 <p class="field-error">Please add a short message.</p>
               </div>
 
               <div>
                 <button type="submit" class="btn btn-primary">Submit Enquiry</button>
-                <p class="form-note">This form does not send live data — it is a front-end prototype for this project stage.</p>
+                <p class="form-note">We reply within one working day. Closed on Mondays.</p>
               </div>
 
             </div>
@@ -104,11 +115,11 @@
         </div>
 
         <aside>
-          <div class="card" class="mb-md">
+          <div class="card mb-md">
             <h3>Private Functions</h3>
             <p>Host birthdays, anniversaries, or intimate gatherings in our upstairs balcony space with views over Orlando.</p>
           </div>
-          <div class="card" class="mb-md">
+          <div class="card mb-md">
             <h3>Corporate Bookings</h3>
             <p>Meeting rooms and long-table setups available for corporate lunches and team functions.</p>
           </div>
@@ -118,6 +129,29 @@
           </div>
         </aside>
 
+      </div>
+    </div>
+  </section>
+
+  <section class="on-dark">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Good to Know</p>
+        <h2>Frequently asked questions.</h2>
+      </div>
+      <div class="accordion">
+        <div class="accordion-item">
+          <h3><button type="button" class="accordion-trigger" id="faq1-btn" aria-expanded="false" aria-controls="faq1">Do I need to book ahead?</button></h3>
+          <div class="accordion-panel" id="faq1" role="region" aria-labelledby="faq1-btn" hidden><p>We recommend booking for weekends and for groups of 6 or more. Walk-ins are welcome when tables are free.</p></div>
+        </div>
+        <div class="accordion-item">
+          <h3><button type="button" class="accordion-trigger" id="faq2-btn" aria-expanded="false" aria-controls="faq2">Is there a deposit for private functions?</button></h3>
+          <div class="accordion-panel" id="faq2" role="region" aria-labelledby="faq2-btn" hidden><p>Yes. A deposit per guest secures private and corporate bookings. We confirm the amount when you enquire.</p></div>
+        </div>
+        <div class="accordion-item">
+          <h3><button type="button" class="accordion-trigger" id="faq3-btn" aria-expanded="false" aria-controls="faq3">Can you cater for dietary needs?</button></h3>
+          <div class="accordion-panel" id="faq3" role="region" aria-labelledby="faq3-btn" hidden><p>Yes. Mention any allergies or dietary needs in your message and our chef will plan around them.</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -150,6 +184,6 @@
   </div>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.js" defer></script>
 </body>
 </html>
