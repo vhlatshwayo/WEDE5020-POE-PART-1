@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-SITE.netlify.app/sitemap.xml
+Sitemap: https://vhlatshwayo.github.io/WEDE5020-POE-PART-1/sitemap.xml
