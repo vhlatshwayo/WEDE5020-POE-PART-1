@@ -1,0 +1,5 @@
+[
+  { "title": "Chef's Table Evening", "date": "2026-11-14", "description": "A four-course tasting menu from our kitchen, paired with wines by our sommelier. Limited to 10 guests.", "price": "R1 450 per guest" },
+  { "title": "Heritage Sunday Lunch", "date": "2026-11-22", "description": "A long-table family lunch of South African classics, with a short talk on the story of Vilakazi Street.", "price": "R320 per guest" },
+  { "title": "Cellar Wine Tasting", "date": "2026-12-05", "description": "Taste six South African wines in our cellar with a guide to pairing each one with food.", "price": "R250 per guest" }
+]
