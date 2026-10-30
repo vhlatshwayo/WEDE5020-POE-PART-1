@@ -66,7 +66,7 @@ Part 3 adds JavaScript functionality, search engine optimisation (SEO), form val
 - Errors show next to each field, appear when the user leaves a field, and focus moves to the first problem on submit.
 
 **Deployment**
-- Hosted on a free platform (add your live link here): https://YOUR-SITE.netlify.app/
+- Hosted on GitHub Pages (free host): https://vhlatshwayo.github.io/WEDE5020-POE-PART-1/
 
 ## Sitemap
 ```
